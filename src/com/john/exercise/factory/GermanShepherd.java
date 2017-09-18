@@ -1,5 +1,6 @@
 package com.john.exercise.factory;
 
+
 public class GermanShepherd implements Dog{
 	
 	@Override

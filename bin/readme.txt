@@ -20,6 +20,16 @@ single object gets created. This class provides a way to access its only object 
 
 directly without need to instantiate the object of the class.
 
+
+    Abstract Factory, Builder, and Prototype can use Singleton in their implementation.
+    Facade objects are often Singletons because only one Facade object is required.
+    State objects are often Singletons.
+    The advantage of Singleton over global variables is that you are absolutely sure of the number of instances when you use Singleton, and, you can change your mind and manage any number of instances.
+    The Singleton design pattern is one of the most inappropriately used patterns. Singletons are intended to be used when a class must have exactly one instance, no more, no less. Designers frequently use Singletons in a misguided attempt to replace global variables. A Singleton is, for intents and purposes, a global variable. The Singleton does not do away with the global; it merely renames it.
+    When is Singleton unnecessary? Short answer: most of the time. Long answer: when it's simpler to pass an object resource as a reference to the objects that need it, rather than letting objects access the resource globally. The real problem with Singletons is that they give you such a good excuse not to think carefully about the appropriate visibility of an object. Finding the right balance of exposure and protection for an object is critical for maintaining flexibility.
+    Our group had a bad habit of using global data, so I did a study group on Singleton. The next thing I know Singletons appeared everywhere and none of the problems related to global data went away. The answer to the global data question is not, "Make it a Singleton." The answer is, "Why in the hell are you using global data?" Changing the name doesn't change the problem. In fact, it may make it worse because it gives you the opportunity to say, "Well I'm not doing that, I'm doing this" – even though this and that are the same thing.
+
+
 3----------------------------------------------------------------------------------------------------------3
 
 Builder pattern builds a complex object using simple objects and using a step by step approach. This type of 
@@ -82,16 +92,22 @@ colors using same abstract class method but different bridge implementer classes
 
 7----------------------------------------------------------------------------------------------------------7
 
-Composite pattern is used where we need to treat a group of objects in similar way as a single object. Composite pattern composes objects in term of a tree structure to represent part as well as whole hierarchy. This type of design pattern comes under structural pattern as this pattern creates a tree structure of group of objects.
+Composite pattern is used where we need to treat a group of objects in similar way as a single object. Composite 
+
+pattern composes objects in term of a tree structure to represent part as well as whole hierarchy. This type of design 
+
+pattern comes under structural pattern as this pattern creates a tree structure of group of objects.
 
 This pattern creates a class that contains group of its own objects. This class provides ways to modify its group of same objects.
 
-8----------------------------------------------------------------------------------------------------------8
-Decorator pattern allows a user to add new functionality to an existing object without altering its structure. This type of design pattern comes under structural pattern as this pattern acts as a wrapper to existing class.
+8--------------------------------------------------------------------------------------------------=--------8
+Decorator pattern allows a user to add new functionality to an existing object without altering its structure. This type of design 
 
-This pattern creates a decorator class which wraps the original class and provides additional functionality keeping class methods signature intact.
+pattern comes under structural pattern as this pattern acts as a wrapper to existing class. This pattern creates a decorator class 
 
-We are demonstrating the use of decorator pattern via following example in which we will decorate a shape with some color without alter shape class.
+which wraps the original class and provides additional functionality keeping class methods signature intact. We are demonstrating the 
+
+use of decorator pattern via following example in which we will decorate a shape with some color without alter shape class.
 
 9----------------------------------------------------------------------------------------------------------9
 Facade pattern hides the complexities of the system and provides an interface to the client using which the client can access the system. This type of design pattern comes under structural pattern as this pattern adds an interface to existing system to hide its complexities.
@@ -105,3 +121,4 @@ Flyweight pattern tries to reuse already existing similar kind objects by storin
 
 
 REF: Tutorials Point, https://www.tutorialspoint.com/design_pattern/
+https://sourcemaking.com/design_patterns/

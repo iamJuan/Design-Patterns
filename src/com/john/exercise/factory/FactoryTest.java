@@ -1,5 +1,6 @@
 package com.john.exercise.factory;
 
+
 public class FactoryTest {
 	public static void main(String args[]){
 		DogFactory dogFactory = new DogFactory();

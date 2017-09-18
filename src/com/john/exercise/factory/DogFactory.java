@@ -1,5 +1,6 @@
 package com.john.exercise.factory;
 
+
 public class DogFactory {
 	
 	public Dog getDog(String dogType){

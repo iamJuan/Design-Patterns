@@ -1,5 +1,6 @@
 package com.john.exercise.factory;
 
+
 public class SiberianHusky implements Dog{
 	
 	@Override

@@ -10,15 +10,17 @@ public class FlyweightPatternDemo {
 			circle.setY(getRandomY());
 			circle.setRadius(100);
 			circle.draw();
-		}
-		
+		}		
 	}
+	
 	private static String getRandomColor() {
 		return colors[(int)(Math.random()*colors.length)];
 	}
+	
 	private static int getRandomX() {
 		return (int)(Math.random()*100 );
 	}	
+	
 	private static int getRandomY() {
 		return (int)(Math.random()*100);
 	}
